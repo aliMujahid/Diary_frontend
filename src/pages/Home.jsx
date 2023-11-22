@@ -1,3 +1,10 @@
+import TopicSeletctor from "../components/TopicSelector";
+
 export default function Home() {
-  return <>Home page</>;
+  return (
+    <>
+      <h2>Home page</h2>
+      <TopicSeletctor />
+    </>
+  );
 }
