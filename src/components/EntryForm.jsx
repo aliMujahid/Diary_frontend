@@ -1,5 +1,7 @@
 import { useState } from "react";
 import TopicSeletctor from "./TopicSelector";
+import Popup from "reactjs-popup";
+import CreateTopic from "./CreateTopic";
 
 export default function EntryForm() {
   // the default topic should be the latest updated topic
@@ -16,6 +18,12 @@ export default function EntryForm() {
   return (
     <form onSubmit={handelSubmit} action="#">
       <TopicSeletctor onChange={(e) => setTopic(e.target.value)} />
+      <Popup
+        trigger={<button id="createTopic">+</button>}
+        position="center center"
+      >
+        <CreateTopic />
+      </Popup>
       <textarea
         onChange={(e) => setEntry(e.target.value)}
         name="entry"

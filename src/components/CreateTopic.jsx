@@ -8,9 +8,9 @@ export default function CreateTopic() {
   };
 
   return (
-    <form action="#">
+    <form action="#" onSubmit={handelSubmit}>
       <input type="text" onChange={(e) => setTopic(e.target.value)} />
-      <input type="submit" onSubmit={handelSubmit} value="Add" />
+      <input type="submit" value="Add" />
     </form>
   );
 }
